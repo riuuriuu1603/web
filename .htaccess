@@ -1,0 +1,105 @@
+# BEGIN iThemes Security - Do not modify or remove this line
+# iThemes Security Config Details: 2
+	# Pass through Authorization header.
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+		RewriteCond %{HTTP:Authorization} ^(.*)
+		RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+	</IfModule>
+# END iThemes Security - Do not modify or remove this line
+
+# BEGIN HMWP_RULES
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /tfb/
+RewriteRule ^([_0-9a-zA-Z-]+/)?quantrivien/(.*) /tfb/wp-admin/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/d0f4711431/(.*) /tfb/wp-content/plugins/hide-my-wp/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/ea6bb49b18/(.*) /tfb/wp-content/plugins/beaver-builder-lite-version/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/c419573b69/(.*) /tfb/wp-content/plugins/better-wp-security/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/434b8996f4/(.*) /tfb/wp-content/plugins/classic-editor/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/5808943e98/(.*) /tfb/wp-content/plugins/easy-appointments/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/f65f29574d/(.*) /tfb/wp-content/plugins/elementor/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/32a82a95e5/(.*) /tfb/wp-content/plugins/insert-headers-and-footers/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/3a129b4c74/(.*) /tfb/wp-content/plugins/popup-builder/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/d1709c6ea9/(.*) /tfb/wp-content/plugins/smart-slider-3/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/55c05ff668/(.*) /tfb/wp-content/plugins/social-icons-widget-by-wpzoom/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/625b94bfb7/(.*) /tfb/wp-content/plugins/tinymce-advanced/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/5f535e89d2/(.*) /tfb/wp-content/plugins/wordfence/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/5208687256/(.*) /tfb/wp-content/plugins/wp-simple-booking-calendar/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/7864f32584/(.*) /tfb/wp-content/plugins/wps-hide-login/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/29a4c4aa29/(.*) /tfb/wp-content/plugins/wpscan/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/(.*) /tfb/wp-content/plugins/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/assets/d71fe157ff/(.*) /tfb/wp-content/themes/businex/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/assets/6ca4266385/(.*) /tfb/wp-content/themes/twentynineteen/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/assets/f1dfeb5569/(.*) /tfb/wp-content/themes/twentytwenty/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/assets/96f874eecb/(.*) /tfb/wp-content/themes/twentytwentyone/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/assets/(.*) /tfb/wp-content/themes/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?storage/(.*) /tfb/wp-content/uploads/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/(.*) /tfb/wp-content/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?lib/(.*) /tfb/wp-includes/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?comments/(.*) /tfb/wp-comments-post.php$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?writer/(.*) /tfb/author/$2 [QSA,L]
+</IfModule>
+
+<Files xmlrpc.php>
+Order deny,allow
+Deny from all
+Allow from 127.0.0.1
+Allow from *.wordpress.com
+Allow from 192.0.64.0/18
+Allow from 185.64.140.0/22
+Allow from 2a04:fa80::/29
+Allow from 76.74.255.0/22
+Allow from 192.0.65.0/22
+Allow from 192.0.80.0/22
+Allow from 192.0.96.0/22
+Allow from 192.0.123.0/22
+Satisfy All 
+ErrorDocument 404 /
+</Files>
+
+
+# END HMWP_RULES
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /tfb/
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?quantrivien/(.*) /tfb/wp-admin/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/d0f4711431/(.*) /tfb/wp-content/plugins/hide-my-wp/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/ea6bb49b18/(.*) /tfb/wp-content/plugins/beaver-builder-lite-version/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/c419573b69/(.*) /tfb/wp-content/plugins/better-wp-security/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/434b8996f4/(.*) /tfb/wp-content/plugins/classic-editor/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/5808943e98/(.*) /tfb/wp-content/plugins/easy-appointments/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/f65f29574d/(.*) /tfb/wp-content/plugins/elementor/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/32a82a95e5/(.*) /tfb/wp-content/plugins/insert-headers-and-footers/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/3a129b4c74/(.*) /tfb/wp-content/plugins/popup-builder/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/d1709c6ea9/(.*) /tfb/wp-content/plugins/smart-slider-3/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/55c05ff668/(.*) /tfb/wp-content/plugins/social-icons-widget-by-wpzoom/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/625b94bfb7/(.*) /tfb/wp-content/plugins/tinymce-advanced/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/5f535e89d2/(.*) /tfb/wp-content/plugins/wordfence/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/5208687256/(.*) /tfb/wp-content/plugins/wp-simple-booking-calendar/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/7864f32584/(.*) /tfb/wp-content/plugins/wps-hide-login/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/29a4c4aa29/(.*) /tfb/wp-content/plugins/wpscan/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/modules/(.*) /tfb/wp-content/plugins/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/assets/d71fe157ff/(.*) /tfb/wp-content/themes/businex/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/assets/6ca4266385/(.*) /tfb/wp-content/themes/twentynineteen/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/assets/f1dfeb5569/(.*) /tfb/wp-content/themes/twentytwenty/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/assets/96f874eecb/(.*) /tfb/wp-content/themes/twentytwentyone/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/assets/(.*) /tfb/wp-content/themes/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?storage/(.*) /tfb/wp-content/uploads/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?core/(.*) /tfb/wp-content/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?lib/(.*) /tfb/wp-includes/$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?comments/(.*) /tfb/wp-comments-post.php$2 [QSA,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?writer/(.*) /tfb/author/$2 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /tfb/index.php [L]
+</IfModule>
+
+# END WordPress
